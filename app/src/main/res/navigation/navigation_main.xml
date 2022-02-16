@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/usersFragment">
+
+    <save_state_fragment
+        android:id="@+id/usersFragment"
+        android:name="com.example.usersclient.UsersFragment"
+        android:label="fragment_users"
+        tools:layout="@layout/fragment_users" >
+        <action
+            android:id="@+id/action_usersFragment_to_userDetailsFragment"
+            app:destination="@id/userDetailsFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </save_state_fragment>
+    <save_state_fragment
+        android:id="@+id/userDetailsFragment"
+        android:name="com.example.usersclient.UserDetailsFragment"
+        android:label="fragment_user_details"
+        tools:layout="@layout/fragment_user_details" >
+        <argument
+            android:name="user"
+            app:argType="com.example.usersclient.data.repositories.User" />
+        <action
+            android:id="@+id/action_userDetailsFragment_to_updateUserFragment"
+            app:destination="@id/updateUserFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_userDetailsFragment_to_usersFragment"
+            app:destination="@id/usersFragment" />
+    </save_state_fragment>
+    <save_state_fragment
+        android:id="@+id/updateUserFragment"
+        android:name="com.example.usersclient.UpdateUserFragment"
+        android:label="fragment_update_user"
+        tools:layout="@layout/fragment_update_user" >
+        <argument
+            android:name="user"
+            app:argType="com.example.usersclient.data.repositories.User" />
+        <action
+            android:id="@+id/action_updateUserFragment_to_usersFragment"
+            app:destination="@id/usersFragment" />
+    </save_state_fragment>
+</navigation>
