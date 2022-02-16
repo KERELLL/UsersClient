@@ -1,11 +1,12 @@
 # UsersClient
 
-Retrofit2
-Room
-MVVM
-Navigation Component
-Glide
-Coroutines
+* Retrofit2
+* Room
+* MVVM
+* Navigation Component
+* Glide
+* Coroutines
+* Material Design
 
 ![image](https://user-images.githubusercontent.com/36132918/154354960-eaf39f16-f437-4c69-89f4-61b3020fd2ac.png)
 ![image](https://user-images.githubusercontent.com/36132918/154354987-5feea647-3478-44a4-b909-36d0c9eb1374.png)
