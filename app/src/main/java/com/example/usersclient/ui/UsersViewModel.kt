@@ -2,12 +2,8 @@ package com.example.usersclient.ui
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.usersclient.UIStateUsers
 import com.example.usersclient.data.local.UserEntity
-import com.example.usersclient.data.local.UsersDao
 import com.example.usersclient.data.local.UsersDatabase
 import com.example.usersclient.data.repositories.User
 import com.example.usersclient.data.repositories.UsersRepository
@@ -15,10 +11,7 @@ import com.example.usersclient.data.repositories.UsersRepositoryImpl
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
-import com.example.usersclient.ui.ViewState
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.map
 
 class UsersViewModel(application: Application) : AndroidViewModel(application) {
 

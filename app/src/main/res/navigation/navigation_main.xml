@@ -7,7 +7,7 @@
 
     <save_state_fragment
         android:id="@+id/usersFragment"
-        android:name="com.example.usersclient.UsersFragment"
+        android:name="com.example.usersclient.ui.UsersFragment"
         android:label="fragment_users"
         tools:layout="@layout/fragment_users" >
         <action
@@ -20,7 +20,7 @@
     </save_state_fragment>
     <save_state_fragment
         android:id="@+id/userDetailsFragment"
-        android:name="com.example.usersclient.UserDetailsFragment"
+        android:name="com.example.usersclient.ui.UserDetailsFragment"
         android:label="fragment_user_details"
         tools:layout="@layout/fragment_user_details" >
         <argument
@@ -39,7 +39,7 @@
     </save_state_fragment>
     <save_state_fragment
         android:id="@+id/updateUserFragment"
-        android:name="com.example.usersclient.UpdateUserFragment"
+        android:name="com.example.usersclient.ui.UpdateUserFragment"
         android:label="fragment_update_user"
         tools:layout="@layout/fragment_update_user" >
         <argument

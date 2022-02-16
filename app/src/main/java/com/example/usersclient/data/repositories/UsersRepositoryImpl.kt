@@ -1,20 +1,14 @@
 package com.example.usersclient.data.repositories
 
-import android.content.Context
-import androidx.lifecycle.LiveData
-import com.example.usersclient.UIStateUsers
+import com.example.usersclient.ui.UIStateUsers
 import com.example.usersclient.data.local.UserEntity
 import com.example.usersclient.data.local.UsersDao
-import com.example.usersclient.data.local.UsersDatabase
 import com.example.usersclient.data.network.api.ApiProvider
 import com.example.usersclient.data.network.api.ApiService
-import com.example.usersclient.data.network.models.UsersResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.withContext
 import java.lang.Exception
-import java.net.UnknownHostException
 
 class UsersRepositoryImpl(private val usersDao: UsersDao) : UsersRepository {
 

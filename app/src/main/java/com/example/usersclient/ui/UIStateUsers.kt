@@ -1,4 +1,4 @@
-package com.example.usersclient
+package com.example.usersclient.ui
 
 sealed class UIStateUsers<out S: Any?, out E: Any?> {
     data class Success<out S: Any?>(val data: S) : UIStateUsers<S, Nothing>()

@@ -1,4 +1,4 @@
-package com.example.usersclient
+package com.example.usersclient.ui
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -8,20 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.coroutineScope
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.usersclient.data.local.UserEntity
-import com.example.usersclient.data.local.UsersDatabase
-import com.example.usersclient.data.repositories.User
 import com.example.usersclient.databinding.FragmentUsersBinding
-import com.example.usersclient.ui.UsersListAdapter
-import com.example.usersclient.ui.UsersViewModel
-import com.example.usersclient.ui.ViewState
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
@@ -68,7 +59,9 @@ class UsersFragment : Fragment() {
 
         usersListAdapter = UsersListAdapter(requireContext()) {
             val user = it
-            val action = UsersFragmentDirections.actionUsersFragmentToUserDetailsFragment(user)
+            val action = UsersFragmentDirections.actionUsersFragmentToUserDetailsFragment(
+                    user
+                )
             findNavController().navigate(action)
         }
 

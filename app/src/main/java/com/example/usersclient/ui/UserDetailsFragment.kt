@@ -1,4 +1,4 @@
-package com.example.usersclient
+package com.example.usersclient.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,14 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.example.usersclient.data.repositories.User
 import com.example.usersclient.databinding.FragmentUserDetailsBinding
-import com.example.usersclient.ui.UsersViewModel
 
 
 class UserDetailsFragment : Fragment() {
@@ -45,11 +42,15 @@ class UserDetailsFragment : Fragment() {
 
         binding.deleteButton.setOnClickListener{
             deleteUser(user)
-            val action = UserDetailsFragmentDirections.actionUserDetailsFragmentToUsersFragment()
+            val action =
+                UserDetailsFragmentDirections.actionUserDetailsFragmentToUsersFragment()
             findNavController().navigate(action)
         }
         binding.updateButton.setOnClickListener {
-            val action = UserDetailsFragmentDirections.actionUserDetailsFragmentToUpdateUserFragment(user)
+            val action =
+                UserDetailsFragmentDirections.actionUserDetailsFragmentToUpdateUserFragment(
+                    user
+                )
             findNavController().navigate(action)
         }
     }

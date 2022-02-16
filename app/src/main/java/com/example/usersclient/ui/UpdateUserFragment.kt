@@ -1,4 +1,4 @@
-package com.example.usersclient
+package com.example.usersclient.ui
 
 import android.os.Bundle
 import android.text.TextUtils
@@ -9,10 +9,9 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.example.usersclient.R
 import com.example.usersclient.data.repositories.User
 import com.example.usersclient.databinding.FragmentUpdateUserBinding
-import com.example.usersclient.databinding.FragmentUserDetailsBinding
-import com.example.usersclient.ui.UsersViewModel
 
 
 class UpdateUserFragment : Fragment() {
